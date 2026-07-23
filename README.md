@@ -64,3 +64,21 @@ src/
 ### Añadir o cambiar palabras
 
 Edita `src/data/categories.js`. Cada categoría es un objeto con `id`, `name`, `emoji` y su lista `words`. Puedes añadir categorías nuevas al array.
+
+
+## 📸 Vista previa
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/42521d6c-3be3-4eb3-8191-e3f557117d3e" width="22%" />
+  <img src="https://github.com/user-attachments/assets/820549eb-0b61-4538-8421-7796a1f31a4a" width="22%" />
+  <img src="https://github.com/user-attachments/assets/f7a0d58d-be35-4cef-affa-80e14a7f6cbb" width="22%" />
+  <img src="https://github.com/user-attachments/assets/20d756b9-de83-45e4-9f97-29d9e0c2f566" width="22%" />
+  <img src="https://github.com/user-attachments/assets/aa1e66a5-554b-4346-a0b0-028c1af2bdcb" width="22%" />
+  <img width="22%" src="https://github.com/user-attachments/assets/3d5e4e6d-09a0-4d42-8a81-2b07b5ad874d" />
+
+</p>
+
+
+## 👾 Sobre el desarrollador
+
+Desarrollado por Ivan. 
