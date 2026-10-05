@@ -1,41 +1,41 @@
-# 🕵️ El Impostor
+# 🕵️ The Impostor
 
-Juego de fiesta del impostor para jugar **en local con amigos, sin conexión a internet**. Se pasa un solo móvil de mano en mano.
+A party game of deception designed to be played **locally with friends, completely offline**. One phone is passed around from player to player.
 
-Hecho con **Expo + React Native**. Interfaz y palabras en español.
+Built with **Expo + React Native**. Interface and word lists are in Spanish.
 
-## Cómo jugar
+## How to Play
 
-1. Configura la partida:
-   - **Jugadores** (3–12)
-   - **Impostores** (1 hasta la mitad del grupo)
-   - **Pista para el impostor** (si está activada, el impostor ve la *categoría* pero no la palabra)
-   - **Categoría** de palabras
-2. Pasa el móvil a cada jugador. Cada uno ve en secreto si tiene la palabra o si es el impostor.
-3. Por turnos, cada jugador da una pista sobre la palabra **sin decirla**. El impostor improvisa.
-4. Debatid (hay un temporizador opcional de 2 min), votad al sospechoso y pulsad **Revelar**.
+1. Configure the match:
+   - **Players** (3–12)
+   - **Impostors** (1 up to half of the group)
+   - **Hint for the impostor** (if enabled, the impostor sees the *category* but not the secret word)
+   - **Word category**
+2. Pass the phone to each player. Each person secretly discovers whether they know the word or are the impostor.
+3. Taking turns, each player gives a clue about the word **without saying it**. The impostor must improvise.
+4. Discuss (there is an optional 2-minute timer), vote for the suspect, and press **Reveal**.
 
-## Categorías incluidas
+## Included Categories
 
-Día a día (por defecto), Cine y televisión, Fútbol, Gente famosa, Marcas, Lugares, Personajes y Trabajos.
+Everyday Life (default), Movies & TV, Football, Famous People, Brands, Places, Characters, and Jobs.
 
-## Cómo ejecutarla
+## Running the App
 
-Necesitas [Node.js](https://nodejs.org) instalado (ya lo tienes).
+You need [Node.js](https://nodejs.org) installed.
 
 ```bash
 npm install
 npm start
 ```
 
-Se abrirá Expo con un **código QR**:
+Expo will open and display a **QR code**:
 
-- **En tu móvil**: instala la app gratuita **Expo Go** (Play Store / App Store) y escanea el QR. Una vez cargada funciona sin internet.
-- **En el navegador** (para probar rápido): pulsa `w` en la terminal.
+- **On your phone:** install the free **Expo Go** app (Google Play / App Store) and scan the QR code. Once loaded, the game works offline.
+- **In the browser** (for quick testing): press `w` in the terminal.
 
-## Generar un APK instalable (Android)
+## Building an Installable APK (Android)
 
-Para tener la app como un `.apk` instalable sin Expo Go, usa EAS Build (gratis):
+To install the game as a standalone `.apk` without Expo Go, use EAS Build (free):
 
 ```bash
 npm install -g eas-cli
@@ -43,42 +43,56 @@ eas login
 eas build -p android --profile preview
 ```
 
-Al terminar te da un enlace para descargar el `.apk`.
+When the build finishes, you will receive a download link for the generated `.apk`.
 
-## Estructura del proyecto
+## Project Structure
 
-```
-App.js                      Máquina de estados entre pantallas
+```text
+App.js                      State machine between screens
+
 src/
-  theme.js                  Colores y tamaños
-  logic.js                  Reparto de roles y elección de palabra
-  data/categories.js        Todas las categorías y palabras
-  components/UI.js          Botón, selector numérico, tarjeta
+  theme.js                  Colors and sizing
+  logic.js                  Role assignment and word selection
+  data/categories.js        All categories and word lists
+  components/UI.js          Button, number selector, card
+
   screens/
-    SetupScreen.js          Configuración
-    RevealScreen.js         Revelación (pasar el móvil)
-    GameScreen.js           Debate + temporizador
-    ResultScreen.js         Resultado final
+    SetupScreen.js          Match configuration
+    RevealScreen.js         Secret role reveal (pass the phone)
+    GameScreen.js           Discussion + timer
+    ResultScreen.js         Final result
 ```
 
-### Añadir o cambiar palabras
+### Adding or Editing Words
 
-Edita `src/data/categories.js`. Cada categoría es un objeto con `id`, `name`, `emoji` y su lista `words`. Puedes añadir categorías nuevas al array.
+Edit `src/data/categories.js`.
 
+Each category is an object containing:
 
-## 📸 Vista previa
+- `id`
+- `name`
+- `emoji`
+- `words`
 
+You can add as many new categories and words as you like.
+
+---
+
+## 📸 Screenshots
+
+```html
 <p align="center">
   <img src="https://github.com/user-attachments/assets/42521d6c-3be3-4eb3-8191-e3f557117d3e" width="22%" />
   <img src="https://github.com/user-attachments/assets/820549eb-0b61-4538-8421-7796a1f31a4a" width="22%" />
   <img src="https://github.com/user-attachments/assets/f7a0d58d-be35-4cef-affa-80e14a7f6cbb" width="22%" />
   <img src="https://github.com/user-attachments/assets/20d756b9-de83-45e4-9f97-29d9e0c2f566" width="22%" />
   <img src="https://github.com/user-attachments/assets/aa1e66a5-554b-4346-a0b0-028c1af2bdcb" width="22%" />
-  <img width="22%" src="https://github.com/user-attachments/assets/3d5e4e6d-09a0-4d42-8a81-2b07b5ad874d" />
-
+  <img src="https://github.com/user-attachments/assets/3d5e4e6d-09a0-4d42-8a81-2b07b5ad874d" width="22%" />
 </p>
+```
 
+---
 
-## 👾 Sobre el desarrollador
+## 👾 About the Developer
 
-Desarrollado por Ivan. 
+Developed by Ivan.
